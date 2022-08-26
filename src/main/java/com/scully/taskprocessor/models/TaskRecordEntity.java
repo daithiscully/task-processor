@@ -6,18 +6,19 @@ import org.springframework.data.relational.core.mapping.Table;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "tasks")
-public class TaskEntity {
+@Table(name = "task_records")
+public class TaskRecordEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
-  private String name;
-  private String userId;
-  private Long currentDurationMs;
-  private Long averageDurationMs;
+  private Long taskId;
+  private Long durationMs;
+  private LocalDateTime createdAt;
+
 }

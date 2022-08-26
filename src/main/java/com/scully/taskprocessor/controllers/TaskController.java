@@ -20,5 +20,4 @@ public class TaskController {
     return "Task duration accepted";
   }
 
-
 }

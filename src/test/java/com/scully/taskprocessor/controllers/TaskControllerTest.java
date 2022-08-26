@@ -2,8 +2,8 @@ package com.scully.taskprocessor.controllers;
 
 import com.scully.taskprocessor.models.TaskDTO;
 import com.scully.taskprocessor.models.TaskEntity;
+import com.scully.taskprocessor.repositories.TaskRecordRepository;
 import com.scully.taskprocessor.services.TaskService;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -17,6 +17,8 @@ class TaskControllerTest {
 
   @Mock
   TaskService taskService;
+  @Mock
+  TaskRecordRepository taskRecordRepository;
   @InjectMocks
   TaskController taskController;
 
@@ -29,10 +31,10 @@ class TaskControllerTest {
   void testAddTaskDuration() {
     // given
     when(taskService.processTask(any(TaskDTO.class), anyString()))
-            .thenReturn(new TaskEntity(1L, "userId", 1L, 1L));
+            .thenReturn(new TaskEntity(1L, "taskName", "userId", 1L, 1L));
 
     // when
-    String actual = taskController.addTaskDuration(new TaskDTO(1L, 1L), "userId");
+    String actual = taskController.addTaskDuration(new TaskDTO("name", 1L), "userId");
 
     // then
     assertThat(actual).isEqualTo("Task duration accepted");

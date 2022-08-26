@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS task_records (id SERIAL NOT NULL PRIMARY KEY, task_id BIGINT, duration_ms BIGINT, created_at timestamp not null default CURRENT_TIMESTAMP);
