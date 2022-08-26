@@ -35,3 +35,9 @@ To build the docker image for the app run the following from the root of the pro
 ```shell
 mvn spring-boot:build-image
 ```
+
+Now you can start up the Postgres and app via docker-compose. Run the following in the `docker` directory:
+(Note: The Postgres container will store its data in a directory within the docker directory)
+```shell
+docker-compose -f ./docker-compose.yml up -d --remove-orphans
+```
