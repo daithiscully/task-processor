@@ -8,7 +8,6 @@ import com.scully.taskprocessor.repositories.TaskRecordRepository;
 import com.scully.taskprocessor.repositories.TaskRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
 
 import java.time.LocalDateTime;
 
