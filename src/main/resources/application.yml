@@ -1,1 +1,10 @@
-
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost/coolplanet
+    username: david
+    password: password
+  flyway:
+    enabled: true
+    url: jdbc:postgresql://localhost/coolplanet
+    user: david
+    password: password
