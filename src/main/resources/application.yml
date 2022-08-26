@@ -8,6 +8,8 @@ spring:
     url: jdbc:postgresql://localhost/coolplanet
     user: david
     password: password
+  zipkin:
+    enabled: false # Disabling for now, don't want to over-complicate the setup
 ---
 spring:
   datasource:
