@@ -8,3 +8,9 @@ spring:
     url: jdbc:postgresql://localhost/coolplanet
     user: david
     password: password
+---
+spring:
+  datasource:
+    url: jdbc:postgresql://db/coolplanet
+  flyway:
+    url: jdbc:postgresql://db/coolplanet

@@ -28,3 +28,10 @@ requirements such as test coverage, scalability, availability, performances, etc
 
 You can engineer the solution to show appropriate design patterns and design choices.
 Optional: Package up the service in docker and run it docker-compose (or similar)
+
+
+## Dockerized
+To build the docker image for the app run the following from the root of the project:
+```shell
+mvn spring-boot:build-image
+```
